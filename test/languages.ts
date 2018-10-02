@@ -743,3 +743,24 @@ export const DartLanguage: Language = {
   quickTestRendererOptions: [],
   sourceFiles: ["src/Language/Dart.ts"]
 };
+
+export const ElixirLanguage: Language = {
+  name: "elixir",
+  base: "test/fixtures/elixir",
+  setupCommand: "mix deps.get",
+  runCommand(sample: string) {
+    return `mix run main.exs \"${sample}\"`;
+  },
+  diffViaSchema: false,
+  skipDiffViaSchema: [],
+  allowMissingNull: false,
+  features: [],
+  output: "quicktype.exs",
+  topLevel: "TopLevel",
+  skipJSON: [],
+  skipSchema: [],
+  skipMiscJSON: false,
+  rendererOptions: {},
+  quickTestRendererOptions: [],
+  sourceFiles: ["src/Language/Elixir.ts"]
+};

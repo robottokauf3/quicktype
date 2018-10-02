@@ -94,3 +94,4 @@ export { JSONSchemaTargetLanguage, JSONSchemaRenderer } from "./language/JSONSch
 export { RustTargetLanguage, RustRenderer } from "./language/Rust";
 export { RubyTargetLanguage, RubyRenderer } from "./language/ruby";
 export { CrystalTargetLanguage, CrystalRenderer } from "./language/Crystal";
+export { ElixirTargetLanguage, ElixirRenderer } from "./language/Elixir";

@@ -71,6 +71,13 @@ RUN echo "deb https://dist.crystal-lang.org/apt crystal main" | tee /etc/apt/sou
 RUN apt-get update
 RUN apt-get install crystal --assume-yes
 
+# Elixir
+RUN curl -O https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+RUN dpkg -i erlang-solutions_1.0_all.deb
+RUN apt-get update
+RUN apt-get install esl-erlang --assume-yes
+RUN apt-get install elixir
+
 ENV PATH="${workdir}/node_modules/.bin:${PATH}"
 
 COPY . .

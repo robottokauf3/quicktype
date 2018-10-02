@@ -20,5 +20,6 @@
     "dist": true
   },
   "spellright.documentTypes": [],
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "elixirLS.projectDir": "test/fixtures/elixir"
 }

@@ -124,7 +124,7 @@ function timeEnd(message: string, suffix: string): void {
 export abstract class Fixture {
   abstract name: string;
 
-  constructor(public language: languages.Language) {}
+  constructor(public language: languages.Language) { }
 
   runForName(name: string): boolean {
     return this.name === name;
@@ -699,6 +699,7 @@ export const allFixtures: Fixture[] = [
   new JSONFixture(languages.JavaScriptLanguage),
   new JSONFixture(languages.KotlinLanguage),
   new JSONFixture(languages.DartLanguage),
+  new JSONFixture(languages.ElixirLanguage),
   new JSONSchemaJSONFixture(languages.CSharpLanguage),
   new JSONTypeScriptFixture(languages.CSharpLanguage),
   new JSONSchemaFixture(languages.CrystalLanguage),
@@ -716,6 +717,7 @@ export const allFixtures: Fixture[] = [
   new JSONSchemaFixture(languages.JavaScriptLanguage),
   new JSONSchemaFixture(languages.KotlinLanguage),
   new JSONSchemaFixture(languages.DartLanguage),
+  new JSONSchemaFixture(languages.ElixirLanguage),
   // FIXME: Why are we missing so many language with GraphQL?
   new GraphQLFixture(languages.CSharpLanguage),
   new GraphQLFixture(languages.JavaLanguage),
@@ -727,5 +729,6 @@ export const allFixtures: Fixture[] = [
   new GraphQLFixture(languages.TypeScriptLanguage),
   new GraphQLFixture(languages.FlowLanguage),
   new GraphQLFixture(languages.JavaScriptLanguage),
-  new GraphQLFixture(languages.DartLanguage)
+  new GraphQLFixture(languages.DartLanguage),
+  new GraphQLFixture(languages.ElixirLanguage)
 ];
